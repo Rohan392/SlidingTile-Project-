@@ -5,13 +5,22 @@
 using namespace std;
 
 class BoardTile {
-public:
-BoardTile(const string&);	
-vector<BoardTile> nextConfigs();	
-int numMoves();	
-int manhattanDistance(const BoardTile& goalconfig);
+  public:
+	  // Standard Constructor.
+    BoardTile(const string&);
+		// Returns a list of possible next board positions.
+    vector<BoardTile> nextConfigs();	
+		// Returns the number of moves taken to get to the current position.
+		int numMoves();	
+		// Returns the minimum number of moves to end in the ideal position.
+    int manhattanDistance(const BoardTile& goalconfig);
 
+  protected:
+	  // Allows the number of moves taken to get to the current position
+		// to be set in numMoves. May be altered to reside in constructor.
+    void setMoves(int);
 private:	
-string config;
-string movesFromStart
+    int Moves;
+    string config;
+    string movesFromStart;
 };
