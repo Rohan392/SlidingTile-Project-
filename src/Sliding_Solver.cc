@@ -1,4 +1,4 @@
-#include "Sliding_Solver.h"
+#include "../include/Sliding_Solver.h"
 #include <iostream>
 #include <string>
 #include <queue>
