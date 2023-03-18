@@ -12,7 +12,7 @@ all: $(SIMILAR) nice
 
 # Similar trees
 $(SIMILAR): $(SIMILAR).o
-	$(CC) $(CCFLAGS) -o Cool.cpp $(SIMILAR).o
+	$(CC) $(CCFLAGS) Cool.cpp Sliding_Solver.o Board_Tile.o
 
 Similar.o: ./src/Sliding_Solver.cc ./src/Board_Tile.cc
 	$(CC) $(CCFLAGS) -c ./src/Sliding_Solver.cc ./src/Board_Tile.cc
@@ -20,7 +20,7 @@ Similar.o: ./src/Sliding_Solver.cc ./src/Board_Tile.cc
 
 # rm the .o files
 nice: 
-	rm *.o
+	rm *.o 
 
 clean:
 	rm *.o a.out
