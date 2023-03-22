@@ -19,6 +19,7 @@ class BoardTile {
 		// returns the current configuration for comparision.
 		string getConfig() {return config;}
 
+
   protected:
 	  // Allows the number of moves taken to get to the current position
 		// to be set in numMoves. May be altered to reside in constructor.
@@ -30,3 +31,9 @@ private:
     string config;
     string movesFromStart;
 };
+
+
+bool operator < (BoardTile& l, BoardTile& r);
+bool operator > (BoardTile& l, BoardTile& r);
+bool operator <= (BoardTile& l, BoardTile& r);
+

@@ -137,7 +137,7 @@ private:
 
 		for (; hole * 2 <= currentSize; hole = child) {
 			child = hole * 2;
-			if (child != currentSize && array[child + 1] < array[child])
+			if ((child != currentSize) && (array[child + 1] < array[child]))
 				++child;
 			if (array[child] < tmp)
 				array[hole] = std::move(array[child]);

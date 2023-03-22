@@ -261,3 +261,17 @@ void BoardTile::setNumMoves(int i){
 void BoardTile::setMovesFromStart(string i){
   movesFromStart = i;
 }
+
+
+bool operator < (BoardTile& l, BoardTile& r){
+  BoardTile Ideal("123456780");
+  return ((l.numMoves() + l.manhattanDistance(Ideal)) < (r.numMoves() + r.manhattanDistance(Ideal)));
+}
+bool operator > (BoardTile& l, BoardTile& r){
+  BoardTile Ideal("123456780");
+  return ((l.numMoves() + l.manhattanDistance(Ideal)) > (r.numMoves() + r.manhattanDistance(Ideal)));
+}
+bool operator <= (BoardTile& l, BoardTile& r){
+  BoardTile Ideal("123456780");
+  return ((l.numMoves() + l.manhattanDistance(Ideal)) <= (r.numMoves() + r.manhattanDistance(Ideal)));
+}
