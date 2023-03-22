@@ -6,6 +6,11 @@
 // Because we rock. 
 using namespace std;
 
+BoardTile::BoardTile(){
+  Moves = 0;
+  config = "000000000";
+  movesFromStart = "";
+}
 BoardTile::BoardTile(const string& current){
   Moves = 0;
   config = current;
