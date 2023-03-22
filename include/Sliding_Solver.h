@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <string>
 #include <queue>
 #include "../include/Board_Tile.h"
@@ -154,6 +155,10 @@ public:
 	void solvePuzzle();
 
 private:
+  //bool shmall(BoardTile &a, BoardTile &b);
+  vector<BoardTile> previousPlaces;
 	BinaryHeap<BoardTile*> tileQueue;
+  void makeSorted();
+  int hasBeen(vector<BoardTile> &Tiles, BoardTile a);
 };
 

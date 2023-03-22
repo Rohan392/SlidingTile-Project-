@@ -16,11 +16,9 @@ BoardTile::BoardTile(const string& current){
 // TBH, we should probably just use pointers here. This feels gross.
 // Also, I want rohan to take a look at this and make it nicer. ugh.
 vector<BoardTile> BoardTile::nextConfigs(){
-  int position, xpos, ypos;
+  int position;
 	position = this->config.find('0');
 	vector<BoardTile> NewVecs;
-  xpos = position % 3;
-	ypos = position / 3;
 
 	string NextOrder = this->config;
 	switch(position){

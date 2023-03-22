@@ -16,6 +16,8 @@ class BoardTile {
     int manhattanDistance(const BoardTile& goalconfig);
 		// returns the path you took from start. 
 		string GetPath();
+		// returns the current configuration for comparision.
+		string getConfig() {return config;}
 
   protected:
 	  // Allows the number of moves taken to get to the current position
