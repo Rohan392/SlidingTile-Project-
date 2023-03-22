@@ -6,6 +6,7 @@ using namespace std;
 
 class BoardTile {
   public:
+	  BoardTile() {}
 	  // Standard Constructor.
     BoardTile(const string&);
 		// Returns a list of possible next board positions.

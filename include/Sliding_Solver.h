@@ -57,24 +57,24 @@ public:
 	/**
 	 * Insert item x, allowing duplicates.
 	 */
-/*	void insert(const Comparable &x) {
-		if (currentSize == array.size() - 1)
+	void insert(const BoardTile &x) {
+		if (currentSize == (int)array.size() - 1)
 			array.resize(array.size() * 2);
 
 		// Percolate up
 		int hole = ++currentSize;
-		Comparable copy = x;
+		BoardTile copy = x;
 
 		array[0] = std::move(copy);
-		for (; x < array[hole / 2]; hole /= 2)
+		for (; copy <= array[hole / 2]; hole /= 2)
 			array[hole] = std::move(array[hole / 2]);
 		array[hole] = std::move(array[0]);
-	}*/
+	}
 
 	/**
 	 * Insert item x, allowing duplicates.
-	 */
-/*	void insert(Comparable &&x) {
+	 
+	void insert(Comparable &&x) {
 		if (currentSize == array.size() - 1)
 			array.resize(array.size() * 2);
 
@@ -89,19 +89,19 @@ public:
 	 * Remove the minimum item.
 	 * Throws UnderflowException if empty.
 	 */
-/*	void deleteMin() {
+	void deleteMin() {
 		if (isEmpty())
 			cout << "The Heap is empty, we cant delete min";
 
 		array[1] = std::move(array[currentSize--]);
 		percolateDown(1);
 	}
-*/
+
 	/**
 	 * Remove the minimum item and place it in minItem.
 	 * Throws Underflow if empty.
 	 */
-/*	void deleteMin(Comparable &minItem) {
+	void deleteMin(BoardTile &minItem) {
 		if (isEmpty())
 			cout << "The Heap is empty, we cant delete min";
 
@@ -113,7 +113,7 @@ public:
 	void makeEmpty() {
 		currentSize = 0;
 	}
-*/
+
 private:
 	int currentSize;  // Number of elements in heap
 	vector<BoardTile> array;        // The heap array
@@ -122,11 +122,11 @@ private:
 	 * Establish heap order property from an arbitrary
 	 * arrangement of items. Runs in linear time.
 	 */
-/*	void buildHeap() {
+	void buildHeap() {
 		for (int i = currentSize / 2; i > 0; --i)
 			percolateDown(i);
 	}
-*/
+
 	/**
 	 * Internal method to percolate down in the heap.
 	 * hole is the index at which the percolate begins.
