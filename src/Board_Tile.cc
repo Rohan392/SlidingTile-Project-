@@ -6,10 +6,6 @@
 // Because we rock. 
 using namespace std;
 
-
-
-
-
 BoardTile::BoardTile(const string& current){
   Moves = 0;
   config = current;
@@ -42,8 +38,8 @@ vector<BoardTile> BoardTile::nextConfigs(){
 			NextOrder[0] = NextOrder[3]; NextOrder[3] = '0';
       BoardTile b(NextOrder);
 			b.setNumMoves(this->numMoves() + 1);
-			a.setMovesFromStart(this->GetPath() + "D");
-			NewVecs.push_back(a);
+			b.setMovesFromStart(this->GetPath() + "D");
+			NewVecs.push_back(b);
 		} break;
     case 1: {
       // Neutral Good.

@@ -6,6 +6,11 @@
 using namespace std;
 
 
+
+
+
+
+
 SlidingSolver::SlidingSolver(string startConfig, string endConfig){};
 
 
