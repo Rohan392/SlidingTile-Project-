@@ -26,6 +26,7 @@ bool shmall(BoardTile &a, BoardTile &b){
 }
 
 
+
 void SlidingSolver::makeSorted(){
   sort(previousPlaces.begin(), previousPlaces.end(), shmall);
 }
