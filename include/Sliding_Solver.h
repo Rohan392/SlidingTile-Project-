@@ -11,8 +11,8 @@ class Compare
 public:
     bool operator() (BoardTile l , BoardTile r )
     {
-    	BoardTile Ideal("123456780");
-    	  return ((l.numMoves() + l.manhattanDistance(Ideal)) > (r.numMoves() + r.manhattanDistance(Ideal)));
+    	  BoardTile Ideal("123456780");
+    	  return ((l.numMoves() + l.manhattanDistance(Ideal)) < (r.numMoves() + r.manhattanDistance(Ideal)));
     }
 };
 
