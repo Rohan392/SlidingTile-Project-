@@ -37,4 +37,4 @@ private:
 bool operator < (BoardTile& l, BoardTile& r);
 bool operator > (BoardTile& l, BoardTile& r);
 bool operator <= (BoardTile& l, BoardTile& r);
-
+bool operator == (BoardTile& l, BoardTile& r);

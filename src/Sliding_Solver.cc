@@ -32,11 +32,37 @@ void SlidingSolver::makeSorted(){
 }
 
 
-SlidingSolver::SlidingSolver(string startConfig, string endConfig){};
+string SlidingSolver::getGud(){
+  return Ending.GetPath();
+}
+
+SlidingSolver::SlidingSolver(string startConfig, string endConfig){
+  BoardTile a(startConfig);
+	BoardTile b(endConfig);
+	Ending = b;
+
+	solvePuzzle(a);
 
 
 
-void SlidingSolver::solvePuzzle (){};
+}
+
+
+void SlidingSolver::solvePuzzle (BoardTile Ans){
+ while((Ending != Ans)){
+	  vector<BoardTile> joy;
+		joy = Ans.nextConfigs();
+		for(int i = 0; i < joy.size(); i++){
+      if(!hasBeen(previousPlaces, joy[i]))
+			  tileQueue.push(joy[i]);
+		}
+		previousPlaces.push_back(Ans);
+		Ans = tileQueue.top();
+		tileQueue.pop();
+	}
+  Ending = Ans;
+
+}
 
 
 

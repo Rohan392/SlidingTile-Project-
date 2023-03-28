@@ -281,4 +281,7 @@ bool operator <= (BoardTile& l, BoardTile& r){
   return ((l.numMoves() + l.manhattanDistance(Ideal)) <= (r.numMoves() + r.manhattanDistance(Ideal)));
 }
 
-
+bool operator == (BoardTile& l, BoardTile& r){
+  BoardTile Ideal("123456780");
+  return (l.getConfig() == r.getConfig());
+}

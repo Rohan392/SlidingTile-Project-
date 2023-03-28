@@ -22,6 +22,7 @@ public:
 class SlidingSolver {
 public:
 	SlidingSolver(string startConfig, string endConfig);
+	string getGud();
 	
 
 private:
@@ -31,6 +32,6 @@ private:
   priority_queue <BoardTile, vector<BoardTile>, Compare> tileQueue;
   void makeSorted();
   int hasBeen(vector<BoardTile> &Tiles, BoardTile a);
-  void solvePuzzle();
+  void solvePuzzle(BoardTile);
 };
 
