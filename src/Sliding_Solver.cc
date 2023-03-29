@@ -49,7 +49,7 @@ SlidingSolver::SlidingSolver(string startConfig, string endConfig){
 
 
 void SlidingSolver::solvePuzzle (BoardTile Ans){
- while((Ending != Ans)){
+ while(!(Ending == Ans)){
 	  vector<BoardTile> joy;
 		joy = Ans.nextConfigs();
 		for(int i = 0; i < joy.size(); i++){
@@ -57,6 +57,7 @@ void SlidingSolver::solvePuzzle (BoardTile Ans){
 			  tileQueue.push(joy[i]);
 		}
 		previousPlaces.push_back(Ans);
+		makeSorted();
 		Ans = tileQueue.top();
 		tileQueue.pop();
 	}

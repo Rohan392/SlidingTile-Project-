@@ -246,6 +246,8 @@ int BoardTile::manhattanDistance(const BoardTile& goalconfig){
 
 	for(int i = 0; i < 9; i++){
     thing = goalconfig.config[i];
+		  if(thing == '0')
+			  continue;
     position = this->config.find(thing);
 		Distance += abs(i%3 - position%3);
 		Distance += abs(i/3 - position/3);
@@ -282,6 +284,5 @@ bool operator <= (BoardTile& l, BoardTile& r){
 }
 
 bool operator == (BoardTile& l, BoardTile& r){
-  BoardTile Ideal("123456780");
   return (l.getConfig() == r.getConfig());
 }

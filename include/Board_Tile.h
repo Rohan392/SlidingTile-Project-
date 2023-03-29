@@ -27,7 +27,7 @@ class BoardTile {
     void setNumMoves(int);
 		// Ditto for the moves from start function. 
     void setMovesFromStart(string);
-private:	
+//private:	
     int Moves;
     string config;
     string movesFromStart;

@@ -11,8 +11,8 @@ class Compare
 public:
     bool operator() (BoardTile l , BoardTile r )
     {
-    	  BoardTile Ideal("123456780");
-    	  return ((l.numMoves() + l.manhattanDistance(Ideal)) < (r.numMoves() + r.manhattanDistance(Ideal)));
+  	  BoardTile Ideal("123456780");
+    	  return ((l.numMoves() + l.manhattanDistance(Ideal)) > (r.numMoves() + r.manhattanDistance(Ideal)));
     }
 };
 
@@ -21,11 +21,11 @@ public:
 
 class SlidingSolver {
 public:
+	SlidingSolver();
 	SlidingSolver(string startConfig, string endConfig);
 	string getGud();
 	
 
-private:
   //bool shmall(BoardTile &a, BoardTile &b);
 	BoardTile Ending;
   vector<BoardTile> previousPlaces;
