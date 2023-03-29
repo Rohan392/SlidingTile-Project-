@@ -5,6 +5,8 @@
 
 // Because we rock. 
 using namespace std;
+
+
 BoardTile::BoardTile(){
   Moves = 0;
   config = "000000000";

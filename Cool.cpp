@@ -1,7 +1,6 @@
 #include <iostream>
 #include <algorithm>
 #include "./include/Sliding_Solver.h"
-//#include "./include/Board_Tile.h"
 
 using namespace std;
 

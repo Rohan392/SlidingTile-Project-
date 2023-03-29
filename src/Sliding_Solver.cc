@@ -48,7 +48,7 @@ void SlidingSolver::solvePuzzle (BoardTile Ans){
  while(!(Ending == Ans)){
 	  vector<BoardTile> joy;
 		joy = Ans.nextConfigs();
-		for(int i = 0; i < joy.size(); i++){
+		for(int i = 0; i < (int)joy.size(); i++){
       if(!hasBeen(previousPlaces, joy[i]))
 			  tileQueue.push(joy[i]);
 		}

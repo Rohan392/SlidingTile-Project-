@@ -28,8 +28,11 @@ class BoardTile {
     // Ditto for the moves from start function. 
     void setMovesFromStart(string);
 private:	
+    // Number of moves to get to current configuration
     int Moves;
+    // Current configuration
     string config;
+    // path to get to current configuration.
     string movesFromStart;
 };
 
