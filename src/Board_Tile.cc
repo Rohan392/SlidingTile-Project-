@@ -5,12 +5,13 @@
 
 // Because we rock. 
 using namespace std;
-
 BoardTile::BoardTile(){
   Moves = 0;
   config = "000000000";
   movesFromStart = "";
-}
+};
+
+
 BoardTile::BoardTile(const string& current){
   Moves = 0;
   config = current;
@@ -108,9 +109,6 @@ vector<BoardTile> BoardTile::nextConfigs(){
 			c.setNumMoves(this->numMoves() + 1);
 			c.setMovesFromStart(this->GetPath() + "D");
 			NewVecs.push_back(c);
-
-
-
 
 		} break;
     case 4: {
@@ -269,20 +267,7 @@ void BoardTile::setMovesFromStart(string i){
   movesFromStart = i;
 }
 
-
-bool operator < (BoardTile& l, BoardTile& r){
-  BoardTile Ideal("123456780");
-  return ((l.numMoves() + l.manhattanDistance(Ideal)) < (r.numMoves() + r.manhattanDistance(Ideal)));
-}
-bool operator > (BoardTile& l, BoardTile& r){
-  BoardTile Ideal("123456780");
-  return ((l.numMoves() + l.manhattanDistance(Ideal)) > (r.numMoves() + r.manhattanDistance(Ideal)));
-}
-bool operator <= (BoardTile& l, BoardTile& r){
-  BoardTile Ideal("123456780");
-  return ((l.numMoves() + l.manhattanDistance(Ideal)) <= (r.numMoves() + r.manhattanDistance(Ideal)));
-}
-
 bool operator == (BoardTile& l, BoardTile& r){
   return (l.getConfig() == r.getConfig());
 }
+

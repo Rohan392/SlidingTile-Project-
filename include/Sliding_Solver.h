@@ -21,13 +21,12 @@ public:
 
 class SlidingSolver {
 public:
-	SlidingSolver();
 	SlidingSolver(string startConfig, string endConfig);
-	string getGud();
-	
+	BoardTile getGud();
 
-  //bool shmall(BoardTile &a, BoardTile &b);
-	BoardTile Ending;
+
+private:
+  BoardTile Ending;
   vector<BoardTile> previousPlaces;
   priority_queue <BoardTile, vector<BoardTile>, Compare> tileQueue;
   void makeSorted();

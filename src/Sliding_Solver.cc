@@ -1,8 +1,7 @@
 #include "../include/Sliding_Solver.h"
 
+
 using namespace std;
-
-
 
 
 int SlidingSolver::hasBeen(vector<BoardTile> &Tiles, BoardTile a) {
@@ -18,13 +17,12 @@ int SlidingSolver::hasBeen(vector<BoardTile> &Tiles, BoardTile a) {
          upper = mid - 1;
    }
    return 0;
- 
 }
+
 
 bool shmall(BoardTile &a, BoardTile &b){
   return (a.getConfig() < b.getConfig());
 }
-
 
 
 void SlidingSolver::makeSorted(){
@@ -32,9 +30,10 @@ void SlidingSolver::makeSorted(){
 }
 
 
-string SlidingSolver::getGud(){
-  return Ending.GetPath();
+BoardTile SlidingSolver::getGud(){
+  return Ending;
 }
+
 
 SlidingSolver::SlidingSolver(string startConfig, string endConfig){
   BoardTile a(startConfig);
@@ -42,9 +41,6 @@ SlidingSolver::SlidingSolver(string startConfig, string endConfig){
 	Ending = b;
 
 	solvePuzzle(a);
-
-
-
 }
 
 
@@ -62,7 +58,6 @@ void SlidingSolver::solvePuzzle (BoardTile Ans){
 		tileQueue.pop();
 	}
   Ending = Ans;
-
 }
 
 
