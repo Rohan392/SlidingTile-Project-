@@ -40,7 +40,4 @@ The solver starts with a given initial and goal board configuration. It keeps a 
 - Checks if those states have been visited using a sorted vector and binary search.
 - Adds new states to the priority queue.
 - Pops the best candidate and continues until the goal is found.
-
-This approach can be extended to incorporate heuristics like A* for better performance.
-
 ---
